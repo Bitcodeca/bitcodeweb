@@ -98,7 +98,7 @@ url('../fonts/mdicons/md-icons.svg#md-icons') format('svg');font-weight:normal;f
 .social ul li a{display:inline-block;color:#fff;min-width:60px;background:#000;padding:10px 15px;text-decoration:none;text-align:center;-webkit-transition:all 500ms ease;-o-transition:all 500ms ease;transition:all 500ms ease;}
 .social ul li .fa-facebook{background:#3b5998;}
 .social ul li .fa-twitter{background:#00abf0;}
-.social ul li .fa-google-plus{background:#d95232;}
+.social ul li .fa-google-plus{background:#d95232; padding: 10px 12px; }
 .social ul li .fa-instagram{background:#3f729b;}
 .social ul li .fa-envelope{background:#449a88;}
 .social ul li .fa-facebook:hover{background:white;color:#3b5998;padding:10px 0px;min-width:80px;}
