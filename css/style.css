@@ -1,8 +1,4 @@
 @viewport{zoom:1.0;width:device-width;}
-@-webkit-viewport{zoom:1.0;width:device-width}
-@-moz-viewport{zoom:1.0;width:device-width}
-@-ms-viewport{zoom:1.0;width:device-width}
-@-o-viewport{zoom:1.0;width:device-width}
 body{position:relative;height:100%;width:100%;-ms-overflow-x:hidden;overflow-X:hidden;background-color:#f9f9f9;}
 .clearfix:before, .clearfix:after{content:'';display:table;}
 .clearfix:after{clear:both;}
