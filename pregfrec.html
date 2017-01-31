@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+        <meta name="theme-color" content="#222">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#222">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#222">
+    <title>Bitcode Web</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" type="image/gif" href="img/favicon.gif" />
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Josefin+Sans|Anton" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel=stylesheet type=text/css href=css/bootstrap.min.css />
+    <link rel=stylesheet type=text/css href=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel=stylesheet type=text/css href=css/style.css />
+    <script type=text/javascript src=https://code.jquery.com/jquery-2.1.1.min.js></script>
+    <style>
+        #load_screen {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 1000
+        }
+        
+        #loading {
+            position: relative;
+            top: 50%;
+            -ms-transform: translate(0%, -50%);
+            -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%)
+        }
+        
+        .alinear {
+            position: relative;
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 64px
+        }
+    </style>
+    <script>
+        y = 0;
+        function x() { 
+            var a = document.getElementById("load_screen"); jQuery(a).fadeOut("fast", function () { document.body.removeChild(a) }); y++;
+        }
+        func_x = setTimeout(x, 3000);
+        jQuery(window).load(function () {
+            if (y === 0) { clearTimeout(func_x); x(); }
+        });
+    </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-70364405-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+</head>
+
+<body ng-app="contactApp">
+        <div id=load_screen>
+            <div id=loading>
+                <div class=alinear>
+                    <div class="progress">
+                      <div class="indeterminate"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    <header>
+        <nav>
+            <div class="nav-wrapper z-depth-1">
+                <div class="container">
+                <a href="index.html" class="brand-logo"><img src="img/agenciadigital.svg" class="responsive-img" alt="logo" height="54px"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse waves-effect waves-red color1"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li class="active"><a href="pregfrec.html">PREGUNTAS FRECUENTES</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#" class="center-align margintop10 logosidenav"><img src="img/logobitcode.svg" class="responsive-img"></a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li class="active"><a href="pregfrec.html">PREGUNTAS FRECUENTES</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="redessociales hide-on-small-and-down">
+        <ul>
+            <li class="marginbot5">
+                <a class="btn-floating btn-redes waves-effect waves-light facebook hoverable z-depth-1" href="https://www.facebook.com/bitcodeweb/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </li>
+            <li class="marginbot5">
+                <a class="btn-floating btn-redes waves-effect waves-light instagram hoverable z-depth-1" href="https://www.instagram.com/bitcodeweb/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li class="marginbot5">
+                <a class="btn-floating btn-redes waves-effect waves-light twitter hoverable z-depth-1" href="https://twitter.com/BitcodeWeb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a class="btn-floating btn-redes waves-effect waves-light google hoverable z-depth-1" href="https://plus.google.com/107681691570660029983" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fixed-action-btn toolbar hide-on-med-and-up">
+        <a class="btn-floating btn-redes fondo3">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </a>
+        <ul>
+            <li class="waves-effect waves-light facebook"><a href="https://www.facebook.com/bitcodeweb/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
+            <li class="waves-effect waves-light instagram"><a href="https://www.instagram.com/bitcodeweb/" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+            <li class="waves-effect waves-light twitter"><a href="https://twitter.com/BitcodeWeb" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+            <li class="waves-effect waves-light google"><a href="https://plus.google.com/107681691570660029983" target="_blank"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="elevator hide-on-small-and-down">
+        <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-chevron-up fa-stack-1x fa-inverse marginbot10"></i>
+        </span>
+    </div>
+    
+    <main class="marginbot25 margintopmenos25">
+    
+        <div class="parallax-container parallaxinicio2 margintop25">
+            <div class="overlay">
+                <div class="container margintop25 white-text">
+                    <div class="row">
+                        <h3 class="right-align"><i class="fa fa-quote-left" aria-hidden="true"></i> <span class="color2">LOS GANADORES NUNCA ABANDONAN</span> Y LOS QUE ABANDONAN NUNCA GANAN </h3>
+                        <h3 class="right-align bold">- Vince Lombardi</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="img/banner2.jpg"></div>
+        </div>
+
+        <div class="container margintop75">
+            <div class="row">
+
+                <h1 class="center-align">
+                    <span class="bold">Preguntas frecuentes</span>
+                </h1>
+
+                <ul class="collapsible popout margintop50 faqs" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header active"><h2><i class="fa fa-caret-right" aria-hidden="true"></i> ¿Es necesario que mi empresa tenga página web?</h2></div>
+                        <div class="collapsible-body"><p>No es necesario, pero el no tenerla significaría tener una alta desventaja ya que el mundo de los negocios está migrando a plataformas online.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><h2><i class="fa fa-caret-right" aria-hidden="true"></i> ¿Es posible aplicar las estrategias de mercadeo de aquella empresa a la mía para tener el mismo crecimiento?</h2></div>
+                        <div class="collapsible-body"><p>-  No es posible, las estrategias de mercadeo están basadas específicamente tu producto, tu forma de venderlos y tus clientes. Como ambas empresas no son iguales, el resultado es muy posiblemente fallido para su empresa.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><h2><i class="fa fa-caret-right" aria-hidden="true"></i> Las Redes Sociales de una empresa son solo para “chatear” con los clientes, ¿Verdad?</h2></div>
+                        <div class="collapsible-body"><p>Si, aunque no exactamente para “chatear” con el cliente si son la mejor forma para lograr un vínculo más personal entre un cliente y la empresa.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><h2><i class="fa fa-caret-right" aria-hidden="true"></i> Tengo una visión de mi negocio muy diferente a lo que piensan los demás, ¿Puede mi página web ser diferente a todas las otras?</h2></div>
+                        <div class="collapsible-body"><p>Correcto, en realidad siendo el internet un recurso mundial, mientras más diferente sea tu página web a las otras más impresión causara y logrará captar la atención de posibles clientes.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><h2><i class="fa fa-caret-right" aria-hidden="true"></i> Si mis clientes en el exterior utilizan, por ejemplo, Google para buscar mi página web, ¿Les aparece?</h2></div>
+                        <div class="collapsible-body"><p>Si, con la correcta y precisa programación del SEO es posible lograr que en cualquier parte del mundo, al utilizar cualquier buscador, sea posible visualizar su página web.</p></div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="parallax-container parallaxinicio3 margintop50">
+            <div class="overlay">
+                <div class="container margintop25 white-text">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <h2 class="center-align">
+                                ¿Tienes preguntas diferentes
+                                <br>
+                                <span class="bold">  para realizarnos?</span>
+                            </h2>
+                            <p class="center-align">Puedes hacerlo a través de cualquiera de nuestros medios de comunicación.</p>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                        <div class="col-xs-6 col-sm-6 col-md-3">
+                            <a class="white-text" href="#!">
+                                <h4>
+                                    <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> @bitcodeweb
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3">
+                            <a class="white-text" href="#!">
+                                <h4>
+                                    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i> @bitcodeweb</i>
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3">
+                            <a class="white-text" href="#!">
+                                <h4>
+                                    <i class="fa fa-twitter fa-lg" aria-hidden="true"></i> @bitcodeweb</i>
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3">
+                            <a class="white-text" href="#!">
+                                <h4>
+                                    <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i> @bitcodeweb</i>
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h2 class="center-align">info@<span class="color2">bitcodeweb.com</span></h2>
+                        <h2 class="center-align">+58 424-500-6239</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="img/banner2.jpg"></div>
+        </div>
+
+
+    </main>
+    <footer class="page-footer white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <h4>CONTÁCTANOS</h4>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="tablafooter">
+                                    <a href="#!">
+                                        <i class="fa fa-envelope fa-2x color3" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="paddingtop1 paddingbot0">
+                                    <a href="#!">
+                                        <p class="margintop0 marginbot0 color1">info@bitcodeweb.com</p>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablafooter">
+                                    <a href="#!">
+                                        <i class="fa fa-phone fa-2x color3" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="paddingtop1 paddingbot0">
+                                    <a href="#!">
+                                        <p class="margintop0 marginbot0 color1">+58 424-5006239</p>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablafooter">
+                                    <a href="#!">
+                                        <i class="fa fa-phone fa-2x color3" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="paddingtop1 paddingbot0">
+                                    <a href="#!">
+                                        <p class="margintop0 marginbot0 color1">+58 414-5190399</p>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <h4>SÍGUENOS</h4>
+                    <a class="btn-floating btn-redes waves-effect waves-light facebook hoverable z-depth-1" href="https://www.facebook.com/bitcodeweb/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-redes waves-effect waves-light instagram hoverable z-depth-1" href="https://www.instagram.com/bitcodeweb/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-redes waves-effect waves-light twitter hoverable z-depth-1" href="https://twitter.com/BitcodeWeb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-redes waves-effect waves-light google hoverable z-depth-1" href="https://plus.google.com/107681691570660029983" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <h4>MENÚ</h4>
+                    <ul class="">
+                        <li class="active"><a href="index.html"><p class="color1">INICIO</p></a></li>
+                        <li><a href="nosotros.html"><p class="color1">NOSOTROS</p></a></li>
+                        <li><a href="servicios.html"><p class="color1">SERVICIOS</p></a></li>
+                        <li><a href="portafolio.html"><p class="color1">PORTAFOLIO</p></a></li>
+                        <li><a href="pregfrec.html"><p class="color1">PREGUNTAS FRECUENTES</p></a></li>
+                        <li><a href="contacto.html"><p class="color1">CONTACTO</p></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="row center-align margintop10">
+                        <img src="img/agenciadigital.svg" class="responsive-img" alt="logo" width="220px">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <p class="center-align">Bitcode C.A RIF: J-40652187-6</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class=footer>
+            <div class=container>
+                <div class="row marginbot0">
+                    <div class=col-md-12>
+                        <div class=center-align>
+                            <p class="copyright center-align small"> Todos los Derechos Reservados | Desarrollado por
+                                <a href=http://bitcodeweb.com/ target=_blank class="verticalaligntextbottom"><img src=img/logobitcodeb.svg height="22px" width="auto"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js></script>
+    <script src='js/elevator.min.js'></script>
+    <script>
+        var elementButton = document.querySelector('.elevator');
+        var elevator = new Elevator({ element: elementButton, mainAudio: './music/elevator.mp3',  endAudio:  './music/ding.mp3' });
+    </script>
+    <script>
+        $(window).scroll(function() { if ($(this).scrollTop()) { $('.elevator').fadeIn(); } else { $('.elevator').fadeOut(); } });
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            new WOW().init();
+            $('.collapsible').collapsible();
+            $(".button-collapse").sideNav();
+            $('.parallax').parallax();
+        });
+    </script>
+</body>
+
+</html>

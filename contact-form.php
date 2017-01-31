@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once '/home/bitcodeweb/public_html/phpmailer/PHPMailerAutoload.php';
 
-if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['message'])) {
+if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['message']) && isset($_POST['numero'])) {
 
     //check if any of the inputs are empty
     if (empty($_POST['nombre']) || empty($_POST['email']) || empty($_POST['message'])) {
@@ -18,7 +18,7 @@ if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['message']
     $mail->FromName = $_POST['nombre'];
     $mail->AddAddress('bitcodemail@gmail.com');
     $mail->Subject = 'Contacto bitcodeweb.com';
-    $mail->Body = "Nombre: " . $_POST['nombre'] . "\r\n\r\nEmail: " . $_POST['email'] . "\r\n\r\nMensaje: " . stripslashes($_POST['message']);
+    $mail->Body = "Nombre: " . $_POST['nombre'] . "\r\n\r\nNúmero: " . $_POST['numero'] . "\r\n\r\nEmail: " . $_POST['email'] . "\r\n\r\nMensaje: " . stripslashes($_POST['message']);
     
     if(!$mail->send()) {
         $data = array('success' => false, 'message' => 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo);

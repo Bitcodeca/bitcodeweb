@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+        <meta name="theme-color" content="#222">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#222">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#222">
+    <title>Bitcode Web</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" type="image/gif" href="img/favicon.gif" />
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Josefin+Sans|Anton" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css" />
+    <link rel=stylesheet type=text/css href=css/bootstrap.min.css />
+    <link rel=stylesheet type=text/css href=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel=stylesheet type=text/css href=css/style.css />
+    <script type=text/javascript src=https://code.jquery.com/jquery-2.1.1.min.js></script>
+    <style>
+        #load_screen {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 1000
+        }
+        
+        #loading {
+            position: relative;
+            top: 50%;
+            -ms-transform: translate(0%, -50%);
+            -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%)
+        }
+        
+        .alinear {
+            position: relative;
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 64px
+        }
+    </style>
+    <script>
+        y = 0;
+        function x() { 
+            var a = document.getElementById("load_screen"); jQuery(a).fadeOut("fast", function () { document.body.removeChild(a) }); y++;
+        }
+        func_x = setTimeout(x, 3000);
+        jQuery(window).load(function () {
+            if (y === 0) { clearTimeout(func_x); x(); }
+        });
+    </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-70364405-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+</head>
+
+<body ng-app="contactApp">
+        <div id=load_screen>
+            <div id=loading>
+                <div class=alinear>
+                    <div class="progress">
+                      <div class="indeterminate"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    <header>
+        <nav>
+            <div class="nav-wrapper z-depth-1">
+                <div class="container">
+                <a href="index.html" class="brand-logo"><img src="img/agenciadigital.svg" class="responsive-img" alt="logo" height="54px"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse waves-effect waves-red color1"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="active"><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li><a href="pregfrec.html">PREGUNTAS FRECUENTES</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#" class="center-align margintop10 logosidenav"><img src="img/logobitcode.svg" class="responsive-img"></a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="active"><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                    <li><a href="pregfrec.html">PREGUNTAS FRECUENTES</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <div class="redessociales hide-on-small-and-down">
+        <ul>
+            <li class="marginbot5">
+                <a class="btn-floating btn-redes waves-effect waves-light facebook hoverable z-depth-1" href="https://www.facebook.com/bitcodeweb/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </li>
+            <li class="marginbot5">
+                <a class="btn-floating btn-redes waves-effect waves-light instagram hoverable z-depth-1" href="https://www.instagram.com/bitcodeweb/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li class="marginbot5">
+                <a class="btn-floating btn-redes waves-effect waves-light twitter hoverable z-depth-1" href="https://twitter.com/BitcodeWeb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a class="btn-floating btn-redes waves-effect waves-light google hoverable z-depth-1" href="https://plus.google.com/107681691570660029983" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fixed-action-btn toolbar hide-on-med-and-up">
+        <a class="btn-floating btn-redes fondo3">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </a>
+        <ul>
+            <li class="waves-effect waves-light facebook"><a href="https://www.facebook.com/bitcodeweb/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>
+            <li class="waves-effect waves-light instagram"><a href="https://www.instagram.com/bitcodeweb/" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+            <li class="waves-effect waves-light twitter"><a href="https://twitter.com/BitcodeWeb" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+            <li class="waves-effect waves-light google"><a href="https://plus.google.com/107681691570660029983" target="_blank"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="elevator hide-on-small-and-down">
+        <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-chevron-up fa-stack-1x fa-inverse marginbot10"></i>
+        </span>
+    </div>
+
+    <main class="marginbot25 margintopmenos25">
+    
+        <div class="parallax-container parallaxinicio2 margintop25">
+            <div class="overlay">
+                <div class="container margintop25 white-text">
+                    <div class="row">
+                        <h3 class="right-align"><i class="fa fa-quote-left" aria-hidden="true"></i> EL REALISMO ES PARA PESIMISTAS. <span class="color2">UN OPTIMISTA CREA SU PROPIA REALIDAD.</span></h3>
+                        <h3 class="right-align bold">- David Harley</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="img/banner2.jpg"></div>
+        </div>
+
+        <div class="container">
+            <div class="row margintop25"  data-aos="fade-up">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <h1 class="center-align">
+                        <span class="bold">BITCODE</span>
+                        <br>
+                        AGENCIA DIGITAL
+                    </h1>
+                    <p class="center-align">BITCODE es una agencia digital experta en el desarrollo y diseño web con una alta calidad y creatividad, siempre enfocados hacia la excelencia. Presenta la mejor alternativa para solucionar sus necesidades y asegurándole una mejora considerable al futuro de su negocio. Ubicados en la ciudad de Barquisimeto en Venezuela, la especialización en la creación de sitios web personalizados e interactivos ha sido la dirección a tomar, cumpliendo y sobrepasando las expectativas de sus cliente.</p>
+                </div>
+            </div>
+            <div class="row margintop75">
+                <div class="col-xs-12 col-sm-6" data-aos="fade-right">
+                    <h2 class="center-align">
+                        Innovación Creativa 
+                        <br>
+                        <span class="bold">Desarrollo de tu Futuro </span>
+                    </h2>
+                    <p class="center-align">El estudio de su empresa, los antecedentes, la forma en que operan, el elemento diferenciador y sus objetivos son la base para garantizar el éxito de las estrategias. El objetivo final es impulsar el crecimiento de su negocio creando un gran impacto a través del desarrollo web. No es posible conformarse con nada menor a la excelencia.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 margintop25" data-aos="fade-left">
+                    <h5 class="bold">DISEÑO</h5>
+                    <div class="progress custom colorbarra2">
+                          <div class="determinate custom" style="width: 80%"></div>
+                    </div>
+                    <h5 class="bold">MARKETING</h5>
+                    <div class="progress custom colorbarra3">
+                          <div class="determinate custom" style="width: 90%"></div>
+                    </div>
+                    <h5 class="bold">DESARROLLO</h5>
+                    <div class="progress custom colorbarra4">
+                          <div class="determinate custom" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container margintop50">
+            <div class="row" data-aos="fade-down">
+                <h2 class="center-align">
+                    ¿Qué tecnologías 
+                    <span class="bold"> web utilizamos? </span>
+                </h2>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <h4 class=bold>LENGUAJES DE PROGRAMACIÓN</h4>
+
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">HTML5</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">CSS3</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">JavaScript</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">PHP</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">MySQL</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Java</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">C#</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Objective-C</span>
+                </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <h4 class=bold>FRAMEWORKS</h4>
+
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">JQuery</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Angular JS</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">NodeJS</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Bootstrap</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">MaterializeCSS</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Ajax</span>
+                </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <h4 class=bold>CMS</h4>
+
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Wordpress</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Joomla</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Drupal</span>
+                </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <h4 class=bold>SERVICIOS</h4>
+
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Paypal</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">MercadoPago</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Social APIs</span>
+                </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+                <h4 class=bold>HERRAMIENTAS</h4>
+
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Git</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Hootsuite</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">Adobe Suite</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 center-align">
+                    <span class="letra1 tecnosotros">FileZilla</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="parallax-container parallaxinicio2 margintop25">
+            <div class="overlay">
+                <div class="container margintop25 white-text">
+                    <div class="row center-align">
+                        <div class="col-xs-4 col-sm-4">
+                            <h4>
+                                <div class="counternum">18</div>
+                            </h4>
+                            <h4>Clientes satisfechos</h4>
+                        </div>
+                        <div class="col-xs-4 col-sm-4">
+                            <h4>
+                                <div class="counternum">32</div>
+                            </h4>
+                            <h4>Proyectos realizados</h4>
+                        </div>
+                        <div class="col-xs-4 col-sm-4">
+                            <h4>
+                                <div class="counternum">128340</div>
+                            </h4>
+                            <h4>Líneas de código</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="img/banner2.jpg"></div>
+        </div>
+
+    </main>
+    <footer class="page-footer white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <h4>CONTÁCTANOS</h4>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="tablafooter">
+                                    <a href="#!">
+                                        <i class="fa fa-envelope fa-2x color3" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="paddingtop1 paddingbot0">
+                                    <a href="#!">
+                                        <p class="margintop0 marginbot0 color1">info@bitcodeweb.com</p>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablafooter">
+                                    <a href="#!">
+                                        <i class="fa fa-phone fa-2x color3" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="paddingtop1 paddingbot0">
+                                    <a href="#!">
+                                        <p class="margintop0 marginbot0 color1">+58 424-5006239</p>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tablafooter">
+                                    <a href="#!">
+                                        <i class="fa fa-phone fa-2x color3" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="paddingtop1 paddingbot0">
+                                    <a href="#!">
+                                        <p class="margintop0 marginbot0 color1">+58 414-5190399</p>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <h4>SÍGUENOS</h4>
+                    <a class="btn-floating btn-redes waves-effect waves-light facebook hoverable z-depth-1" href="https://www.facebook.com/bitcodeweb/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-redes waves-effect waves-light instagram hoverable z-depth-1" href="https://www.instagram.com/bitcodeweb/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-redes waves-effect waves-light twitter hoverable z-depth-1" href="https://twitter.com/BitcodeWeb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-redes waves-effect waves-light google hoverable z-depth-1" href="https://plus.google.com/107681691570660029983" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <h4>MENÚ</h4>
+                    <ul class="">
+                        <li class="active"><a href="index.html"><p class="color1">INICIO</p></a></li>
+                        <li><a href="nosotros.html"><p class="color1">NOSOTROS</p></a></li>
+                        <li><a href="servicios.html"><p class="color1">SERVICIOS</p></a></li>
+                        <li><a href="portafolio.html"><p class="color1">PORTAFOLIO</p></a></li>
+                        <li><a href="pregfrec.html"><p class="color1">PREGUNTAS FRECUENTES</p></a></li>
+                        <li><a href="contacto.html"><p class="color1">CONTACTO</p></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="row center-align margintop10">
+                        <img src="img/agenciadigital.svg" class="responsive-img" alt="logo" width="220px">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <p class="center-align">Bitcode C.A RIF: J-40652187-6</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class=footer>
+            <div class=container>
+                <div class="row marginbot0">
+                    <div class=col-md-12>
+                        <div class=center-align>
+                            <p class="copyright center-align small"> Todos los Derechos Reservados | Desarrollado por
+                                <a href=http://bitcodeweb.com/ target=_blank class="verticalaligntextbottom"><img src=img/logobitcodeb.svg height="22px" width="auto"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js></script>
+    <script src='js/elevator.min.js'></script>
+    <script>
+        var elementButton = document.querySelector('.elevator');
+        var elevator = new Elevator({ element: elementButton, mainAudio: './music/elevator.mp3',  endAudio:  './music/ding.mp3' });
+    </script>
+    <script>
+        $(window).scroll(function() { if ($(this).scrollTop()) { $('.elevator').fadeIn(); } else { $('.elevator').fadeOut(); } });
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            AOS.init();
+            $('.counternum').counterUp({ delay: 20, time: 1500 });
+            $(".button-collapse").sideNav();
+            $('.parallax').parallax();
+        });
+    </script>
+</body>
+
+</html>
