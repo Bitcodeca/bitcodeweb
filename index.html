@@ -44,7 +44,7 @@
     <meta name="Googlebot" content="all" />
 
     <!--<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Josefin+Sans|Anton" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu:700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css" />
     <link rel=stylesheet type=text/css href=css/bootstrap.min.css />
@@ -54,31 +54,11 @@
     <script type=text/javascript src=https://code.jquery.com/jquery-2.1.1.min.js></script>
     <script src="js/modernizr.custom.js"></script>
     <style>
-        #load_screen {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: #fff;
-            z-index: 99999
-        }
-        
-        #loading {
-            position: relative;
-            top: 50%;
-            -ms-transform: translate(0%, -50%);
-            -webkit-transform: translate(0%, -50%);
-            transform: translate(0%, -50%)
-        }
-        
-        .alinear {
-            position: relative;
-            -ms-transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            left: 50%;
-            width: 64px
-        }
+        #load_screen { position: fixed; top: 0; width: 100%; height: 100%; background: #fff; z-index: 99999 }
+        #loading { position: relative; top: 50%; -ms-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%) }
+        .alinear { position: relative; -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 50%; width: 64px }
+        nav {background-color: rgba(0,0,0,0.3); position: absolute; z-index:11;}
+        nav ul a, .side-nav a { color: #eee; }
     </style>
     <script>
         y = 0;
@@ -115,10 +95,10 @@
             <div class="nav-wrapper z-depth-1">
                 <div class="container">
                 <a href="index.html" class="brand-logo">
-                    <img src="img/agenciadigital.svg" class="responsive-img" alt="logo" height="54px">
+                    <img src="img/agenciadigitalblanco.svg" class="responsive-img" alt="logo" height="54px">
                 </a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse waves-effect waves-red color1">
-                    <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+                    <i class="fa fa-bars fa-3x color2" aria-hidden="true"></i>
                 </a>
                 <ul class="right hide-on-med-and-down">
                     <li class="active"><a href="index.html">INICIO</a></li>
@@ -181,27 +161,40 @@
 
 
     <main class="marginbot25">
-        <div class="slider inicio">
+
+    <!--    <div class="slider inicio">
             <ul class="slides inicio">
                 <li>
-                    <img src="img/bbanner.jpg"> <!-- random image -->
+                    <img src="img/bbanner.jpg">
                     <div class="caption center-align">
                         <h2 class="white-text letra3 carouselfontsize">ESTRATEGIA Y DISEÑO<br>CONECTADOS</h2>
                     </div>
                 </li>
                 <li>
-                    <img src="img/bbanner3.jpg"> <!-- random image -->
+                    <img src="img/bbanner3.jpg">
                     <div class="caption left-align">
                         <h2 class="white-text letra3 carouselfontsize">ESPECIALISTAS EN<br>EXPERIENCIA DEL USUARIO</h2>
                     </div>
                 </li>
                 <li>
-                    <img src="img/bbanner2.jpg"> <!-- random image -->
+                    <img src="img/bbanner2.jpg">
                     <div class="caption right-align">
                         <h2 class="white-text letra3 carouselfontsize">TU AGENCIA PARA UN<br>MUNDO ONLINE</h2>
                     </div>
                 </li>
             </ul>
+        </div>
+        -->
+        <div class="videoinicio">
+          <div class="overlayvideo">
+            <div class="textovideo">
+              <h2 class="center-align white-text letra3 carouselfontsize">TU AGENCIA PARA<br>UN MUNDO CONECTADO</h2>
+              <h4 class="center-align white-text letra1">Somos la mejor alternativa para asegurar el futuro de tu negocio.</h4>
+            </div>
+          </div>
+            <video loop autoplay muted>
+                <source src="img/bitcode.MP4" type="video/mp4">
+            </video>
         </div>
         <div class="container">
             <div class="row margintop25 center-align" data-aos="fade-up">
@@ -807,7 +800,7 @@
     <script>
         jQuery(document).ready(function () {
             AOS.init();
-            $('.slider').slider({full_width: true});
+            $('.slider').slider({full_width: true, interval:3500});
             $(".button-collapse").sideNav();
             $('.parallax').parallax();
             jQuery('#Container').mixItUp({

@@ -82,7 +82,7 @@ p {font-size: 1.35em; font-family: 'Josefin Sans', sans-serif; letter-spacing: 1
 .bold {font-weight: bold;}
 /*.letra1{font-family: 'Dosis', sans-serif;}*/
 .letra2{font-family: 'Josefin Sans', sans-serif;}
-.letra3{font-family: 'Anton', sans-serif;}
+.letra3{font-family: 'Ubuntu', sans-serif;}
 .color1 {color: #222 !important;}
 .color2 {color: #2C9DB4 !important;}
 .color3 {color: #526EA6 !important;}
@@ -102,7 +102,6 @@ table{ font-family: 'Montserrat', sans-serif; }
 
 .logosidenav{height: 76px!important; line-height: 76px!important;}
 .side-nav li.active { background-color: rgba(82,110,166,1); }
-.carouselfontsize{font-size: 7em; letter-spacing: 5px;}
 
 .overlay{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;background-color:rgba(0,0,0,0.7);}
 
@@ -145,7 +144,7 @@ table{ font-family: 'Montserrat', sans-serif; }
 
 .btn-redes{height: 48px;width: 48px;}
 .btn-redes i{line-height: 48px;}
-.redessociales{position: fixed; left: 0px; top: 50%; z-index: 9999; -ms-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%)}
+.redessociales{position: fixed; left: 0px; top: 50%; z-index: 996; -ms-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%)}
 .instagram, .facebook, .twitter, .google {background-color:#b4432c}
 .instagram:hover{background-color: #e1306c}
 .facebook:hover{background-color: #3b5998}
@@ -176,6 +175,11 @@ footer .google{background-color: #dd4b39}
 .cs-style-3 figcaption { width: CALC(100% - 30px); left: 15px; height: 64px; top: auto; bottom: 0; opacity: 0; -webkit-transform: translateY(100%); -moz-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.1s; -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.1s; transition: transform 0.4s, opacity 0.1s 0.1s; display: none; }
 .no-touch .cs-style-3 figure:hover figcaption, .cs-style-3 figure.cs-hover figcaption { opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px); -webkit-transition: -webkit-transform 0.1s, opacity 0.4s; -moz-transition: -moz-transform 0.1s, opacity 0.4s; transition: transform 0.1s, opacity 0.4s; display: block }
 
+.videoinicio{width: 100%; height: 100vh; min-height: 950px; overflow: hidden;z-index: 10;}
+.videoinicio video {min-width: 100%; min-height: 100%; position: relative; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%)}
+.overlayvideo{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;background-color:rgba(0,0,0,0.3);}
+.textovideo{ position: relative; top: 45%; left: 50%; -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%)}
+.carouselfontsize{font-size: 7em; letter-spacing: 0px; line-height: 100%;}
 
 @media (max-width:1440px){
     nav ul a { font-size: 1.3em;}
@@ -184,13 +188,15 @@ footer .google{background-color: #dd4b39}
     h3 {font-size: 2.4em; }
     h4 {font-size: 2.1em; }
     h5 {font-size: 1.6em; }
-
+    .videoinicio{min-height: 822px;}
 }
 @media (max-width:1366px){
     nav ul a { font-size: 1.2em; letter-spacing: 0px; }
     .custom-card.horizontal .card-image { max-width: 60%; }
     .slider.inicio{height: 668px!important}
     .slider .slides.inicio{height: 668px!important;}
+    .videoinicio{min-height: 768px;}
+    .videoinicio video {width: auto;min-height: 768px; height: 100%;}
 }
 @media (max-width:1080px){
     nav ul a { font-size: 1.1em; letter-spacing: 1px; }
@@ -222,6 +228,7 @@ footer .google{background-color: #dd4b39}
     .carouselfontsize{font-size: 4em; letter-spacing: 2px;}
 }
 @media (max-width:420px){
+    .videoinicio{min-height: 100%;}
 }
 @media (max-width:325px){
     .parallaxinicio{height: 740px !important;}
