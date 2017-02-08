@@ -4,13 +4,14 @@
 <head>
     <meta charset=utf-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+    <meta name=viewport content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <meta name="theme-color" content="#222">
-    <!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="#222">
-    <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#222">
+    
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <title>Bitcode Web</title>
 
@@ -57,8 +58,8 @@
         #load_screen { position: fixed; top: 0; width: 100%; height: 100%; background: #fff; z-index: 99999 }
         #loading { position: relative; top: 50%; -ms-transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); transform: translate(0%, -50%) }
         .alinear { position: relative; -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 50%; width: 64px }
-        nav {background-color: rgba(0,0,0,0.3); position: absolute; z-index:11;}
-        nav ul a, .side-nav a { color: #eee; }
+        nav {background-color: rgba(0,0,0,0.3); position: absolute; z-index:999;}
+        nav ul a { color: #eee; }
     </style>
     <script>
         y = 0;
@@ -188,11 +189,11 @@
         <div class="videoinicio">
           <div class="overlayvideo">
             <div class="textovideo">
-              <h2 class="center-align white-text letra3 carouselfontsize">TU AGENCIA PARA<br>UN MUNDO CONECTADO</h2>
-              <h4 class="center-align white-text letra1">Somos la mejor alternativa para asegurar el futuro de tu negocio.</h4>
+              <h2 class="center-align white-text letra3 carouselfontsize">TU AGENCIA DIGITAL<br>PARA UN MUNDO CONECTADO</h2>
+              <h4 class="center-align white-text letra1">Ofrecemos la mejor alternativa para asegurar el futuro de tu negocio en un mundo que nunca duerme.</h4>
             </div>
           </div>
-            <video loop autoplay muted>
+            <video playsinline loop autoplay muted poster="img/portadavideo.jpg">
                 <source src="img/bitcode.MP4" type="video/mp4">
             </video>
         </div>
@@ -810,6 +811,20 @@
                 load: { filter: '*' }
             });
         });
+    </script>
+    <script>
+      'use strict';
+      var video = document.querySelector('video');
+      var promise = video.play();
+      if (promise === undefined) {
+        console.log('Promisified video play() not supported');
+      } else {
+        promise.then(function() {
+          console.log('Video playback successfully initiated, returning a promise');
+        }).catch(function(error) {
+          console.log('Error initiating video playback: ', error);
+        });
+      }
     </script>
 </body>
 
