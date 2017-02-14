@@ -189,14 +189,14 @@ footer .google{background-color: #dd4b39}
     h3 {font-size: 2.4em; }
     h4 {font-size: 2.1em; }
     h5 {font-size: 1.6em; }
-    .videoinicio, .videoinicio video, .overlayvideo{height: 871px; min-height: auto;}
+    .videoinicio, .overlayvideo{min-height: 871px;}
 }
 @media (max-width:1366px){
     nav ul a { font-size: 1.2em; letter-spacing: 0px; }
     .custom-card.horizontal .card-image { max-width: 60%; }
     .slider.inicio{height: 668px!important}
     .slider .slides.inicio{height: 668px!important;}
-    .videoinicio, .videoinicio video, .overlayvideo{height: 768px;}
+    .videoinicio, .overlayvideo{min-height: 768px;}
     .textovideo h2{font-size: 5.4em;}
     .textovideo h4{font-size: 1.6em;}
 }
@@ -208,7 +208,7 @@ footer .google{background-color: #dd4b39}
     .custom-card.horizontal { display: block; }
     .custom-card.horizontal .card-image { max-width: 100%; }
     .iconofooter { margin-top: -180px; width: 90px; }
-    .videoinicio, .videoinicio video, .overlayvideo{height: 700px;}
+    .videoinicio, .overlayvideo{min-height: 700px;}
     .textovideo h2{font-size: 5em;}
     .textovideo h4{font-size: 1.5em;}
 }
@@ -234,13 +234,13 @@ footer .google{background-color: #dd4b39}
     .textovideo h4{font-size: 1.4em;}
 }
 @media (max-width:420px){
-    .videoinicio, .videoinicio video, .overlayvideo {height: 568px;}
+    .videoinicio, .overlayvideo {min-height: 568px;}
     .textovideo h2{font-size: 4em;}
     .textovideo h4{font-size: 1.4em;}
 }
 @media (max-width:325px){
     .parallaxinicio{height: 740px !important;}
-    .videoinicio, .videoinicio video, .overlayvideo {height: 480px;}
+    .videoinicio, .overlayvideo {min-height: 480px;}
     .textovideo h2{font-size: 3.4em;}
     .textovideo h4{font-size: 1.4em;}
 }
